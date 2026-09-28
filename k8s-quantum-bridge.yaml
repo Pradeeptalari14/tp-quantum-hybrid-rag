@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quantum-hybrid-bridge
+  namespace: ai-platform
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: quantum-bridge
+  template:
+    metadata:
+      labels:
+        app: quantum-bridge
+    spec:
+      containers:
+        - name: simulator
+          image: ghcr.io/pradeeptalari14/quantum-rag:latest
+          resources:
+            requests:
+              cpu: 500m
+              memory: 512Mi
+            limits:
+              cpu: 2000m
+              memory: 2Gi

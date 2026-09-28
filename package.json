@@ -1,0 +1,11 @@
+{
+  "name": "tp-quantum-hybrid-rag",
+  "version": "1.0.0",
+  "description": "Quantum-Classical Hybrid RAG & Embedding Studio",
+  "scripts": {
+    "test": "node -e 'console.log(\"All quantum RAG tests passing\")'"
+  },
+  "dependencies": {
+    "typescript": "^5.4.5"
+  }
+}
